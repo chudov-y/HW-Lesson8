@@ -19,7 +19,8 @@ public class RegistrationPage {
                     subjectInput = $("#subjectsInput"),
                     hobbiesWrapper = $("#hobbiesWrapper"),
                     uploadPicture = $("#uploadPicture"),
-                    currentAddressInput = $("#currentAddress");
+                    currentAddressInput = $("#currentAddress"),
+                    stateCity =  $("#stateCity-wrapper");
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -90,14 +91,14 @@ public class RegistrationPage {
 
     public RegistrationPage setState(String state) {
         $("#state").click();
-        $("#stateCity-wrapper").$(byText(state)).click();
+        stateCity.$(byText(state)).click();
 
         return this;
     }
 
     public RegistrationPage setCity(String city) {
         $("#city").click();
-        $("#stateCity-wrapper").$(byText(city)).click();
+       stateCity.$(byText(city)).click();
 
         return this;
     }

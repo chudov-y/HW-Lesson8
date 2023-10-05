@@ -1,10 +1,12 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
 import pages.components.ModalDialogComponent;
 
 
 public class RegistrationWithPageObjectsTest extends TestBase {
+    RegistrationPage registrationPage = new RegistrationPage();
     ModalDialogComponent modalDialog = new ModalDialogComponent();
     @Test
     void successfulRegistrationTest() {

@@ -2,10 +2,12 @@ package tests;
 
 
 import org.junit.jupiter.api.Test;
+import pages.TextBoxRegistrationPage;
 import pages.components.OutputComponent;
 
 
 public class TextBoxWithPageObjectsTest extends TestBase {
+    TextBoxRegistrationPage textBoxRegistrationPage = new TextBoxRegistrationPage();
     OutputComponent output = new OutputComponent();
 
     @Test
