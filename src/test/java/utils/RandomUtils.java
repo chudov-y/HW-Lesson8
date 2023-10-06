@@ -7,11 +7,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
 
     Faker faker = new Faker(Locale.US);
+    final String[] genders = new String[] {"Male", "Female", "Other"},
+                     subjects = new String[] {"Maths", "Arts", "Biology"},
+                     hobbies = new String[] {"Sports", "Reading", "Music"},
+                     pictures = new String[] {"1.png", "2.png", "3.png"};
     final Date birthDate = faker.date().birthday(0, 120);
 
     final Map<String, String[]> states = new HashMap<>();{
@@ -29,52 +32,37 @@ public class RandomUtils {
       bYear = dateFormat("yyyy", birthDate),
       bMonth = dateFormat("MMMM", birthDate),
       bDay = dateFormat("dd", birthDate),
-      subjects = getRandomSubject(),
-      hobbies = getRandomHobbies(),
+      subject = getRandomSubject(),
+      hobby = getRandomHobbies(),
       picture = getRandomPicture(),
       address = faker.address().streetAddress(),
       chooseState = getRandomStates(),
       chooseCity = getRandomStateCities(chooseState);
 
 
-
-    public static int getRandomInt(int min, int max) {
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
-    }
-
-    public static String getRandomItemFromArray(String[] array) {
-        int index = getRandomInt(0, array.length - 1);
-
-        return array[index];
-    }
-
     private String dateFormat(String pattern, Date date) {
         SimpleDateFormat simpleDate = new SimpleDateFormat(pattern, Locale.ENGLISH);
         return simpleDate.format(date);
     }
 
-    public static String getRandomGender() {
-        String[] genders = {"Male", "Female", "Other"};
+    public  String getRandomGender() {
+       return faker.options().option(genders);
 
-        return getRandomItemFromArray(genders);
     }
 
-    public static String getRandomSubject() {
-        String[] subjects = {"Maths", "Arts", "Biology"};
+    public  String getRandomSubject() {
+        return faker.options().option(subjects);
 
-        return getRandomItemFromArray(subjects);
     }
 
-    public static String getRandomHobbies() {
-        String[] hobbies = {"Sports", "Reading", "Music"};
+    public  String getRandomHobbies() {
+        return faker.options().option(hobbies);
 
-        return getRandomItemFromArray(hobbies);
     }
 
-    public static String getRandomPicture() {
-        String[] pictures = {"1.png", "2.png", "3.png"};
+    public  String getRandomPicture() {
+        return faker.options().option(pictures);
 
-        return getRandomItemFromArray(pictures);
     }
     public String getRandomStates(){
 
