@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
 
+
     CalendarComponent calendar = new CalendarComponent();
     SelenideElement titleLabel =  $(".practice-form-wrapper"),
                     firstNameInput =  $("#firstName"),
