@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.components.ModalDialogComponent;
 
-import static com.codeborne.selenide.logevents.SelenideLogger.step;
+import static io.qameta.allure.Allure.step;
 
 @Tag("demoqa")
 public class RegistrationWithPageObjectsJenkinsTest extends TestBase {
