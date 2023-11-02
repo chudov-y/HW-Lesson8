@@ -40,6 +40,10 @@ test {
     systemProperties(System.getProperties())
 }
 
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+}
+
 task demoqa_test(type: Test) {
     useJUnitPlatform {
         includeTags("demoqa")
