@@ -25,7 +25,7 @@ public class RegistrationWithPageObjectsJenkinsTest extends TestBase {
                 .setDateOfBirth("04", "August", "1987")
                 .setSubject("English")
                 .setHobbies("Reading")
-                .uploadPicture("1.png")
+                .uploadPicture("2.png")
                 .setCurrentAddress("Some Address 1")
                 .setState("NCR")
                 .setCity("Delhi")
