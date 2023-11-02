@@ -42,7 +42,7 @@ public class RegistrationWithPageObjectsJenkinsTest extends TestBase {
                 .checkResult("Date of Birth", "04 August,1987")
                 .checkResult("Subjects", "English")
                 .checkResult("Hobbies", "Reading")
-                .checkResult("Picture", "1.png")
+                .checkResult("Picture", "2.png")
                 .checkResult("Address", "Some Address 1")
                 .checkResult("State and City", "NCR Delhi");});
 
