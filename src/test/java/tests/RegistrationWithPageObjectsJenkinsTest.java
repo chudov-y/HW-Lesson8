@@ -25,7 +25,7 @@ public class RegistrationWithPageObjectsJenkinsTest extends TestBase {
                 .setDateOfBirth("04", "August", "1987")
                 .setSubject("English")
                 .setHobbies("Reading")
-                .uploadPicture("2.png")
+                .uploadPicture("img.png")
                 .setCurrentAddress("Some Address 1")
                 .setState("NCR")
                 .setCity("Delhi")
@@ -42,7 +42,7 @@ public class RegistrationWithPageObjectsJenkinsTest extends TestBase {
                 .checkResult("Date of Birth", "04 August,1987")
                 .checkResult("Subjects", "English")
                 .checkResult("Hobbies", "Reading")
-                .checkResult("Picture", "2.png")
+                .checkResult("Picture", "img.png")
                 .checkResult("Address", "Some Address 1")
                 .checkResult("State and City", "NCR Delhi");});
 
